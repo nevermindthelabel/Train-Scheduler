@@ -55,8 +55,8 @@ database.ref().on("child_added", function (childSnapshot) {
         $("<td>").text(nextTrainName),
         $("<td>").text(nextTrainDestination),
         $("<td>").text(nextTrainFrequency),
-        $("<td>").text(minutesAway, 'minutes'),
-        $("<td>").text(nextArrival)
+        $("<td>").text(nextArrival),
+        $("<td>").text(minutesAway, 'minutes')
     )
     $("#incomingTrains > tbody").append(newRow);
 })
