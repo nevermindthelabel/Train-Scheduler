@@ -45,7 +45,7 @@ database.ref().on("child_added", function (childSnapshot) {
     var nextTrainTime = moment(firstTime, 'HH:mm');
     var now = moment();
     var timeDiff = moment().diff(moment(nextTrainTime), 'minutes');
-    var timeRemaining = timeDiff%nextTrainFrequency;
+    var timeRemaining = timeDiff % nextTrainFrequency;
     var minutesAway = nextTrainFrequency - timeRemaining;
     var nextArrival = moment().add(minutesAway, 'minutes').format('hh:mm a')
     
